@@ -1,0 +1,111 @@
+.navbar {
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 5px 0px rgb(220, 226, 234);
+  @media (max-width: 992px) {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 992px) {
+      justify-content: flex-end;
+      gap: 200px;
+    }
+    @media (max-width: 768px) {
+      gap: 50px;
+    }
+    .navbarGamburger {
+      font-size: 35px;
+      font-weight: 700;
+      color: white;
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      padding: 17px 42px;
+      position: relative;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      input {
+        border: none;
+        outline: none;
+        background-color: white;
+        color: rgb(90, 88, 129);
+        &::placeholder {
+          color: rgb(90, 88, 129);
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+      .order {
+        position: absolute;
+        left: 18px;
+        color: rgb(90, 88, 129);
+        cursor: pointer;
+      }
+    }
+
+    .items {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+
+      .nav-icons {
+        color: rgb(78, 78, 78);
+        font-size: 20px;
+        cursor: pointer;
+        @media (max-width: 992px) {
+          font-size: 25px;
+        }
+      }
+
+      .sms {
+        margin-bottom: 2px;
+        cursor: pointer;
+      }
+      .avatar {
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .country {
+        cursor: pointer;
+        position: absolute;
+        top: -1px;
+        right: 39px;
+        width: 14px;
+        height: 15px;
+        font-size: 11px;
+        font-weight: 600;
+        color: white;
+        background-color: #563bff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 992px) {
+          width: 17px;
+          height: 17px;
+          font-size: 11px;
+          top: -4px;
+        }
+      }
+    }
+  }
+}
